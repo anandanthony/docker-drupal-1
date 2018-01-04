@@ -148,5 +148,5 @@ RUN /etc/init.d/mysql start && \
 # Allow Kernel and Browser tests to be run via PHPUnit.	
 RUN sed -i 's/name="SIMPLETEST_DB" value=""/name="SIMPLETEST_DB" value="sqlite:\/\/localhost\/tmp\/db.sqlite"/' /var/www/core/phpunit.xml.dist
 
-EXPOSE 80 3306 22 443
+EXPOSE 80 3306 2222 443
 CMD exec supervisord -n
